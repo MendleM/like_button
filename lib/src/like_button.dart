@@ -1,7 +1,7 @@
 ///
 ///  create by zmtzawqlp on 2019/5/27
 ///
-import 'package:easy_debounce/easy_debounce.dart';
+import 'package:easy_debounce/easy_throttle.dart';
 import 'package:flutter/material.dart';
 import 'package:like_button/src/painter/bubbles_painter.dart';
 import 'package:like_button/src/painter/circle_painter.dart';
@@ -282,7 +282,7 @@ class LikeButtonState extends State<LikeButton> with TickerProviderStateMixin {
 
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
-      onTap: () => EasyDebounce.debounce(
+      onTap: () => EasyThrottle.throttle(
         'like-button-tap',
         const Duration(milliseconds: 150),
         onTap,
